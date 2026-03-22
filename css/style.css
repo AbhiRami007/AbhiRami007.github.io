@@ -9161,7 +9161,9 @@ textarea.form-control {
     .ftco-section {
       padding: 6em 0; } }
 
-      .skill-group {
+    
+
+      #skills-section .skill-group {
         background: #fff;
         border-radius: 16px;
         padding: 24px;
@@ -9170,25 +9172,25 @@ textarea.form-control {
         transition: all 0.3s ease;
       }
       
-      .skill-group:hover {
+      #skills-section .skill-group:hover {
         transform: translateY(-4px);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
       }
       
-      .skill-group h4 {
+      #skills-section .skill-group h4 {
         font-size: 18px;
         font-weight: 700;
         margin-bottom: 16px;
         color: #222;
       }
       
-      .skill-tags {
+      #skills-section .skill-tags {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
       }
       
-      .skill-tags span {
+      #skills-section .skill-tags span {
         display: inline-block;
         padding: 8px 14px;
         border-radius: 999px;
@@ -9200,7 +9202,7 @@ textarea.form-control {
         transition: all 0.3s ease;
       }
       
-      .skill-tags span:hover {
+      #skills-section .skill-tags span:hover {
         background: #b1b493;
         color: #fff;
         border-color: #b1b493;
