@@ -355,6 +355,8 @@ h1, h2, h3, h4, h5,
 	}
 }
 
+
+
 //OWL CAROUSEL
 .owl-carousel {
 	position: relative;
@@ -1270,6 +1272,51 @@ textarea.form-control {
 	}
 }
 
+
+.skill-group {
+	background: #fff;
+	border-radius: 16px;
+	padding: 24px;
+	height: 100%;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+	transition: all 0.3s ease;
+  }
+  
+  .skill-group:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-group h4 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 16px;
+	color: #222;
+  }
+  
+  .skill-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+  }
+  
+  .skill-tags span {
+	display: inline-block;
+	padding: 8px 14px;
+	border-radius: 999px;
+	background: #f4f6f9;
+	color: #333;
+	font-size: 14px;
+	font-weight: 500;
+	border: 1px solid #e9ecef;
+	transition: all 0.3s ease;
+  }
+  
+  .skill-tags span:hover {
+	background: #007bff;
+	color: #fff;
+	border-color: #007bff;
+  }
 .ftco-no-pt{
 	padding-top: 0 !important;
 }
