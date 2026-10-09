@@ -14,7 +14,7 @@ export const site = {
   resume: "assets/Abhirami_Pradeep_Susi_Resume.pdf",
   description:
     "Backend software engineer with 4+ years building Node.js, TypeScript and NestJS APIs, microservices and real-time features for enterprise products. Extending that foundation into AI-enabled knowledge systems. Open to relocation",
-  location: "Kerala, India · open to relocation",
+  location: "Kerala, India · Open to relocation",
 };
 
 export const hero = {
