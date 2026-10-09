@@ -43,6 +43,10 @@ No build step? You can also run `npm run build` locally and publish the contents
 | Projects and case studies | `src/site.mjs` (`projects`) |
 | AI platform status badges and roadmap | `src/site.mjs` (`aiStatus`) |
 | AI architecture steps | `src/arch.mjs` |
+| Case-study content (flows, layers, journey, outcomes) | `src/projects.mjs` |
+| Interactive demos for each project | `src/assets/demos.js` |
+| 3D stack, flow diagrams, scroll-linked journey | `src/assets/case.js` |
+| Global motion (tilt, reveal, parallax) | `src/assets/fx.js` |
 | UI concept sample data | `src/assets/concept.js` |
 | Colours and type | CSS variables at the top of `src/assets/styles.css` |
 | Resume PDF | replace `src/assets/Abhirami_Pradeep_Susi_Resume.pdf` |
