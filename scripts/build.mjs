@@ -129,7 +129,7 @@ function home() {
   <ol class="tl">${timeline.map(t => `<li data-kind="${t.kind}"><${t.points.length ? `button type="button" aria-expanded="false" aria-controls="tl-${t.id}"` : 'div class="static" style="background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px"'}><span class="when">${esc(t.when)}</span><span class="role">${esc(t.role)}</span><span class="org">${esc(t.org)}</span></${t.points.length ? 'button' : 'div'}>${t.points.length ? `<div class="detail" id="tl-${t.id}" hidden><ul>${t.points.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}</li>`).join('')}</ol></div></section>
 
 <section id="contact" class="contact" aria-labelledby="contact-h"><div class="wrap"><h2 id="contact-h">Let’s talk about backend engineering roles.</h2>
-  <p class="lead">I am looking for a software engineering role in the UAE, especially Dubai, and I am open to relocating. Email is the quickest way to reach me.</p>
+  <p class="lead">I am looking for Software engineer/ Platform Engineer roles and I am open to relocating. Email is the quickest way to reach me.</p>
   <div class="btn-row"><a class="btn btn-primary" href="mailto:${site.email}">${esc(site.email)}</a><a class="btn btn-ghost" href="${site.linkedin}" rel="noopener">LinkedIn</a><a class="btn btn-ghost" href="${site.github}" rel="noopener">GitHub</a><a class="btn btn-ghost" href="${u(site.resume)}">Download resume</a></div></div></section>`;
   const ld = `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: site.name, jobTitle: site.title, url: SITE_URL, sameAs: [site.linkedin, site.github] })}</script>`;
   return page({ title: `${site.name} · ${site.title}`, desc: site.description, path: '', body, ld });
