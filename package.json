@@ -1,0 +1,14 @@
+{
+  "name": "abhirami-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static portfolio for Abhirami Pradeep Susi. Zero runtime dependencies.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "preview": "node scripts/build.mjs && npx --yes serve dist",
+    "test": "node scripts/build.mjs && node scripts/check.mjs"
+  },
+  "engines": { "node": ">=18" }
+}
