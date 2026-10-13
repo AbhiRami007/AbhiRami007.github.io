@@ -157,10 +157,14 @@ export const timeline = [
   {
     id: "georgian",
     kind: "Education",
-    when: "May 2024 – Dec 2024",
+    when: "May 2024 – Jan 2025",
     role: "Postgraduate Diploma, Mobile Application Development",
     org: "Georgian College, Canada",
-    points: [],
+    points: [
+      "Completed with a grade of 8.9/10.",
+      'Built "Drive Me", a cross-platform (Android and iOS) mobile app in React Native that lets users book a vetted driver to drive their own car during unplanned situations, such as travelling to a hospital when unwell. Drivers must meet a qualification criteria before they can accept bookings.',
+      "Completed the programme while working remotely as a part-time Technical Lead.",
+    ],
   },
   {
     id: "trg",
@@ -210,10 +214,10 @@ export const timeline = [
     role: "Master of Computer Applications (MCA)",
     org: "College of Engineering, Trivandrum, India",
     points: [
-      "Developed Node.js and NestJS backend services and PostgreSQL-backed REST APIs for enterprise integrations, including Master Data Management APIs.",
-      "Implemented JWT authentication and authorisation, plus real-time updates through WebSocket and Firebase.",
-      "Wrote unit and integration tests with Jest and Postman, reaching 85% test coverage.",
-      "Contributed Node.js and React.js features and improved application responsiveness by 20%.",
+      "Secured 4th rank in the Kerala MCA lateral entrance examination, earning admission to College of Engineering Trivandrum.",
+      "Graduated with a CGPA of 8.7/10.",
+      "Core coursework: data structures and algorithms, database management systems, operating systems, computer networks and software engineering.",
+      "Final-year project: built an IoT-based vehicle headlight automation system that detects an oncoming vehicle's high beam and automatically dims the headlight, and switches headlights on in foggy conditions to reduce accident risk.",
     ],
   },
   {
@@ -222,7 +226,7 @@ export const timeline = [
     when: "Jun 2015 – Apr 2018",
     role: "Bachelor's Degree, Computer Applications",
     org: "Don Bosco College of Arts and Science, India",
-    points: [],
+    points: ["Graduated with a CGPA of 7.9/10."],
   },
 ];
 
