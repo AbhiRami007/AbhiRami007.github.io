@@ -167,7 +167,7 @@ export const timeline = [
     kind: "Work",
     when: "Feb 2024 – Mar 2025",
     role: "Part-time Technical Lead",
-    org: "The Recruits Group · UK recruitment-technology startup · Remote",
+    org: "The Recruits Group · UK recruitment-technology startup · Remote in Canada",
     points: [
       "Worked directly with the founder on architecture and delivery of core recruitment-platform capabilities.",
       "Designed and built backend and full-stack modules for job posting, candidate discovery and engagement with Node.js, React, PostgreSQL and MongoDB.",
@@ -209,7 +209,12 @@ export const timeline = [
     when: "May 2018 – May 2020",
     role: "Master of Computer Applications (MCA)",
     org: "College of Engineering, Trivandrum, India",
-    points: [],
+    points: [
+      "Developed Node.js and NestJS backend services and PostgreSQL-backed REST APIs for enterprise integrations, including Master Data Management APIs.",
+      "Implemented JWT authentication and authorisation, plus real-time updates through WebSocket and Firebase.",
+      "Wrote unit and integration tests with Jest and Postman, reaching 85% test coverage.",
+      "Contributed Node.js and React.js features and improved application responsiveness by 20%.",
+    ],
   },
   {
     id: "bca",
