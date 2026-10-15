@@ -84,6 +84,7 @@ export const skills = [
     items: [
       ["PostgreSQL", "established"],
       ["MongoDB", "established"],
+      ["MySQL", "established"],
       ["Redis", "established"],
       ["OpenSearch", "established"],
       ["Schema design", "established"],
