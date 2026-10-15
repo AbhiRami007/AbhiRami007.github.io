@@ -97,11 +97,11 @@ export const skills = [
     blurb: "Monitoring and pipelines, with cloud depth still growing.",
     items: [
       ["AWS CloudWatch", "established"],
+      ["AWS S3", "established"],
+      ["AWS SQS", "established"],
       ["Azure DevOps CI/CD", "established"],
-      ["Docker", "established"],
       ["Git and GitHub", "established"],
       ["DigitalOcean and Hostinger deploys", "established"],
-      ["AWS S3 and SQS", "learning"],
     ],
   },
   {
