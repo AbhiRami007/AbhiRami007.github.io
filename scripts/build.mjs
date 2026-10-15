@@ -513,7 +513,7 @@ function home() {
   <p class="lead">${esc(hero.lead)}</p>
   <div class="btn-row"><a class="btn btn-primary" data-magnet href="#work">Explore my work</a><a class="btn btn-ghost" data-magnet href="${u(
     site.resume
-  )}">View resume</a><a class="btn btn-ghost" data-magnet href="#contact">Contact me</a></div>
+  )}" target="_blank">View resume</a><a class="btn btn-ghost" data-magnet href="#contact">Contact me</a></div>
   <div class="link-row"><a href="${
     site.linkedin
   }" rel="me noopener" target="_blank">LinkedIn</a><a href="${
