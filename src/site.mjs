@@ -170,7 +170,7 @@ export const timeline = [
   {
     id: "trg",
     kind: "Work",
-    when: "Feb 2024 – Mar 2025",
+    when: "Feb 2023 – Mar 2024",
     role: "Part-time Technical Lead",
     org: "The Recruits Group · UK recruitment-technology startup · Remote in Canada",
     points: [
