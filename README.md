@@ -1,17 +1,37 @@
 # Abhirami Pradeep Susi · Portfolio
 
-A static, dependency-free portfolio: multi-page, accessible, with a lightweight 3D hero scene,
-an interactive architecture diagram and an interactive UI concept for the AI Enterprise Knowledge Platform.
+**Live site: [abhirami007.github.io](https://abhirami007.github.io)**
 
-## Why no framework
+Personal portfolio of Abhirami Pradeep Susi, a backend software engineer with around 4 years building
+Node.js, TypeScript and NestJS APIs, microservices and real-time features for enterprise products,
+now extending that work into AI-powered knowledge systems.
 
-The site is content-driven and deploys to GitHub Pages, so a tiny build script generates real HTML pages
-(`/`, `/projects/<slug>/`, `/404.html`). That means direct links and refreshes always work, there is
-nothing to hydrate, and there are no dependencies to update. The 3D scene is plain canvas with perspective
-projection (no Three.js), loaded lazily and paused when off screen. Add React or Three.js only if a future
-feature needs them.
+[LinkedIn](https://www.linkedin.com/in/abhirami-pradeep-susi/) ·
+[GitHub](https://github.com/AbhiRami007) ·
+[Resume (PDF)](https://abhirami007.github.io/assets/Abhirami_Pradeep_Susi_Resume.pdf)
 
-## Commands (Node 18+)
+## What's inside
+
+- **Case studies** for Free2Move Charge, HiHydra, a Feature Flag Platform, Engig and a recruitment platform,
+  each with flow diagrams and a small interactive demo. Confidential work is shown with abstract diagrams.
+- **AI Enterprise Knowledge Platform**: an interactive architecture diagram, a UI concept and a roadmap where
+  every feature is labelled honestly (planned, in progress, implemented or tested).
+- **A lightweight 3D hero scene** drawn on plain canvas, loaded lazily and paused when off screen.
+- **Accessible by design**: semantic landmarks, skip link, visible focus states, keyboard-operable tabs,
+  accordions and diagram, reduced-motion support and layouts that work down to 320px.
+
+## How it's built
+
+No framework and no runtime dependencies. A small Node build script turns the content in `src/` into real
+HTML pages (`/`, `/projects/<slug>/`, `/404.html`), so direct links and refreshes always work and there is
+nothing to hydrate. A GitHub Actions workflow builds, checks and deploys the site to GitHub Pages on every
+push to `master`.
+
+---
+
+## Developer notes
+
+### Commands (Node 18+)
 
 ```bash
 npm run build     # generates dist/
@@ -20,30 +40,24 @@ npm test          # build + check
 npm run preview   # build and serve dist/ locally
 ```
 
-## Deploy to GitHub Pages
+### Deploying
 
-This repo is meant to replace the `abhirami007.github.io` repository.
+Push to `master`. The workflow in `.github/workflows/deploy.yml` runs `npm test` and publishes `dist/` to
+GitHub Pages. In the repo, **Settings → Pages → Build and deployment → Source** must be set to
+**GitHub Actions**.
 
-1. Copy this project's files into that repo (replace the old site).
-2. Push to `main`.
-3. In the repo go to **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. The workflow in `.github/workflows/deploy.yml` builds and publishes `dist/`.
-
-If you ever host it as a *project* page (for example `username.github.io/portfolio/`), build with
+If the site is ever hosted as a *project* page (for example `username.github.io/portfolio/`), build with
 `BASE=/portfolio/ SITE_URL=https://username.github.io npm run build`.
 
-No build step? You can also run `npm run build` locally and publish the contents of `dist/` yourself.
-
-## Editing content
+### Editing content
 
 | What | Where |
 |---|---|
 | Name, links, email, summary, hero text | `src/site.mjs` (`site`, `hero`) |
 | Snapshot, skills, timeline | `src/site.mjs` |
-| Projects and case studies | `src/site.mjs` (`projects`) |
+| Projects and case studies | `src/projects.mjs` (re-exported from `src/site.mjs`) |
 | AI platform status badges and roadmap | `src/site.mjs` (`aiStatus`) |
 | AI architecture steps | `src/arch.mjs` |
-| Case-study content (flows, layers, journey, outcomes) | `src/projects.mjs` |
 | Interactive demos for each project | `src/assets/demos.js` |
 | 3D stack, flow diagrams, scroll-linked journey | `src/assets/case.js` |
 | Global motion (tilt, reveal, parallax) | `src/assets/fx.js` |
@@ -60,16 +74,11 @@ real test summary to the case study once you have them.
 
 ### Adding a project
 
-Add an object to `projects` in `src/site.mjs`, add a visual in `scripts/build.mjs` (`visuals`), and rebuild.
-Only add projects whose details you can defend in an interview. Use abstract diagrams for confidential work.
+Add an object to `projects` in `src/projects.mjs`, add a visual in `scripts/build.mjs` (`visuals`), and
+rebuild. Only add projects whose details you can defend in an interview. Use abstract diagrams for
+confidential work.
 
-## Accessibility and performance
+### Privacy
 
-Semantic landmarks, skip link, visible focus states, keyboard-operable tabs, accordions and diagram,
-reduced-motion support (static hero frame, no animation), responsive layouts down to 320px, lazy-loaded hero
-scene and case-study scripts, no images other than the social preview, system-font fallbacks for web fonts.
-
-## Privacy
-
-The resume PDF includes the phone number from your resume. If you prefer not to publish it, export a
-version without it and replace the file.
+The resume PDF is published with the site and includes the phone number from the resume. To keep it private,
+export a version without it and replace the file.
