@@ -13,7 +13,7 @@ export const site = {
   github: "https://github.com/AbhiRami007",
   resume: "assets/Abhirami_Pradeep_Susi_Resume.pdf",
   description:
-    "Backend software engineer with 4+ years building Node.js, TypeScript and NestJS APIs, microservices and real-time features for enterprise products. Extending that foundation into AI-enabled knowledge systems. Open to relocation.",
+    "Backend software engineer with around 4 years building Node.js, TypeScript and NestJS APIs, microservices and real-time features for enterprise products. Extending that foundation into AI-enabled knowledge systems. Open to relocation.",
   location: "Based in Kerala, India · Open to relocation",
 };
 
@@ -27,7 +27,7 @@ export const hero = {
 
 export const snapshot = [
   {
-    title: "4+ years in software engineering",
+    title: "4 years in software engineering",
     text: "Dec 2020 to Mar 2025 across Experion Technologies and a UK recruitment-technology startup.",
   },
   {

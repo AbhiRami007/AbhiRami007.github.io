@@ -501,7 +501,7 @@ const marq = [
   "RAG",
   "pgvector",
 ];
-const icons = ["4+", "API", "EN", "30%", "AI"];
+const icons = ["4", "API", "EN", "30%", "AI"];
 
 function home() {
   const body = `
