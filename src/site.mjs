@@ -13,7 +13,7 @@ export const site = {
   github: "https://github.com/AbhiRami007",
   resume: "assets/Abhirami_Pradeep_Susi_Resume.pdf",
   description:
-    "Backend software engineer with around 4 years building Node.js, TypeScript and NestJS APIs, microservices and real-time features for enterprise products. Extending that foundation into AI-enabled knowledge systems. Open to relocation.",
+    "Backend software engineer with 3+ years building Node.js, TypeScript and NestJS APIs, microservices and real-time features for enterprise products. Extending that foundation into AI-enabled knowledge systems. Open to relocation.",
   location: "Based in Kerala, India · Open to relocation",
 };
 
@@ -27,8 +27,8 @@ export const hero = {
 
 export const snapshot = [
   {
-    title: "4 years in software engineering",
-    text: "Dec 2020 to Mar 2025 across Experion Technologies and a UK recruitment-technology startup.",
+    title: "3+ years in software engineering",
+    text: "Dec 2020 to Apr 2024 at Experion Technologies",
   },
   {
     title: "Backend and API development",
@@ -146,19 +146,22 @@ export const timeline = [
   {
     id: "self",
     kind: "Projects",
-    when: "Apr 2025 – present",
-    role: "Technical projects and upskilling",
+    when: "Jan 2025 – present",
+    role: "Career break, Technical projects and upskilling",
     org: "Self-directed, not paid employment",
     points: [
-      "Designing the AI Enterprise Knowledge Platform: a multi-tenant, document-grounded question answering system.",
-      "Learning LLM API integration, prompt engineering, embeddings and vector retrieval.",
-      "Features are listed as complete only once they are implemented and tested.",
+      "Maternity break in 2025, followed by a structured return to engineering through certification, AI upskilling and hands-on projects",
+      "Earned the Project Management Professional (PMP)® certification, adding formal grounding in delivery planning, risk management and stakeholder communication to technical-lead experience",
+      "Completed Academy Accreditations in Generative AI Fundamentals and AI Agent Fundamentals, building a foundation for LLM-enabled backend systems",
+      "AI Enterprise Knowledge Platform (portfolio project, in development): designing a multi-tenant, document-grounded Q&A platform with NestJS, PostgreSQL/pgvector and RAG with source citations, using AWS S3 and SQS for asynchronous document ingestion and embedding",
+      "Client demo website (KHALIFA perfumes): built a React + NestJS monorepo as a client demonstration project",
+      "Refreshing core JavaScript/TypeScript and backend fundamentals through structured interview preparation",
     ],
   },
   {
     id: "georgian",
     kind: "Education",
-    when: "May 2024 – Jan 2025",
+    when: "May 2024 – Dec 2024",
     role: "Postgraduate Diploma, Mobile Application Development",
     org: "Georgian College, Canada",
     points: [
