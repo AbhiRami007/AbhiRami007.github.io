@@ -24,7 +24,7 @@ export const hero = {
 export const snapshot = [
   {
     title: "3+ years of backend engineering",
-    text: "Associate to Software Engineer at Experion Technologies (Dec 2020 – Apr 2024), plus a year as part-time technical lead for a UK startup.",
+    text: "Associate to Software Engineer at Experion Technologies (Dec 2020 – Mar 2022), then promoted to Software Engineer (Mar 2022 to Apr 2024).",
   },
   {
     title: "APIs and microservices",
