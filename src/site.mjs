@@ -166,19 +166,7 @@ export const timeline = [
       'Built "Drive Me", a cross-platform (Android and iOS) mobile app in React Native that lets users book a vetted driver to drive their own car during unplanned situations, such as travelling to a hospital when unwell. Drivers must meet a qualification criteria before they can accept bookings.',
     ],
   },
-  {
-    id: "trg",
-    kind: "Work",
-    when: "Feb 2023 – Mar 2024",
-    role: "Part-time Technical Lead",
-    org: "The Recruits Group · UK recruitment-technology startup · Remote",
-    points: [
-      "Worked directly with the founder on architecture and delivery of core recruitment-platform capabilities.",
-      "Built backend modules for job posting, candidate discovery and engagement with Node.js, PostgreSQL and MongoDB, and led a two-member React frontend team.",
-      "Owned technical decisions and delivery, from requirements analysis and API design to schema design and implementation.",
-      "Supported deployments to DigitalOcean and Hostinger.",
-    ],
-  },
+
   {
     id: "se",
     kind: "Work",
