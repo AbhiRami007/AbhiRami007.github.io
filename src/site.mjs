@@ -1,7 +1,6 @@
 // ─────────────────────────────────────────────────────────────
 // All portfolio content lives here, separate from presentation.
-// Every claim below comes from the resume or the AI platform brief.
-// Update the `aiStatus` values as you implement and test features.
+// Every claim below matches the resume. Update `aiStatus` as features land.
 // ─────────────────────────────────────────────────────────────
 export const site = {
   name: "Abhirami Pradeep Susi",
@@ -13,38 +12,35 @@ export const site = {
   github: "https://github.com/AbhiRami007",
   resume: "assets/Abhirami_Pradeep_Susi_Resume.pdf",
   description:
-    "Backend software engineer with 3+ years building Node.js, TypeScript and NestJS APIs, microservices and real-time features for enterprise products. Extending that foundation into AI-enabled knowledge systems. Open to relocation.",
+    "Backend software engineer with 3+ years building Node.js, TypeScript and NestJS APIs, microservices and real-time features for enterprise products. Now building a RAG knowledge platform on NestJS and pgvector. Open to relocation.",
   location: "Based in Kerala, India · Open to relocation",
 };
 
 export const hero = {
-  headline: [
-    "Building reliable backend systems.",
-    "Exploring intelligent software.",
-  ],
-  lead: "I'm a backend software engineer experienced in enterprise APIs, microservices, performance optimisation and data-intensive applications, currently extending that foundation into AI-powered knowledge systems.",
+  headline: ["Reliable APIs for real products.", "Now building with RAG."],
+  lead: "I'm a backend engineer with 3+ years of Node.js, TypeScript and NestJS on enterprise products for Stellantis and Black & Veatch: REST APIs, microservices, real-time features and query performance. I'm now building a multi-tenant knowledge platform with RAG and pgvector.",
 };
 
 export const snapshot = [
   {
-    title: "3+ years in software engineering",
-    text: "Dec 2020 to Apr 2024 at Experion Technologies",
+    title: "3+ years of backend engineering",
+    text: "Associate to Software Engineer at Experion Technologies (Dec 2020 – Apr 2024), plus a year as part-time technical lead for a UK startup.",
   },
   {
-    title: "Backend and API development",
-    text: "Node.js, TypeScript and NestJS REST APIs and microservices, with PostgreSQL, MongoDB, Redis and OpenSearch.",
+    title: "APIs and microservices",
+    text: "REST APIs and microservices in Node.js, TypeScript and NestJS, backed by PostgreSQL, MongoDB, Redis and OpenSearch.",
   },
   {
-    title: "Enterprise product experience",
-    text: "Free2Move Charge (Stellantis), Engig (Black & Veatch), HiHydra and a Feature Flag platform, built inside delivery teams at Experion.",
+    title: "Enterprise products",
+    text: "Free2Move Charge (Stellantis), Engig (Black & Veatch), HiHydra and a feature flag platform, delivered in Experion product teams.",
   },
   {
-    title: "Performance work",
-    text: "Reported 30% API performance improvement through Redis caching, PostgreSQL indexing and API redesign.",
+    title: "30% faster APIs",
+    text: "Improved API performance by 30% with Redis caching, PostgreSQL indexing and API redesign.",
   },
   {
-    title: "AI engineering, in progress",
-    text: "Building a portfolio knowledge platform with RAG and pgvector. Labelled as in development, not as shipped work.",
+    title: "AI platform in progress",
+    text: "A multi-tenant RAG platform on NestJS and pgvector. Architecture done; API and schema underway.",
   },
 ];
 
@@ -53,7 +49,7 @@ export const skills = [
   {
     id: "backend",
     name: "Backend engineering",
-    blurb: "The core of my day-to-day work.",
+    blurb: "What I use day to day.",
     items: [
       ["Node.js", "established"],
       ["TypeScript", "established"],
@@ -66,7 +62,7 @@ export const skills = [
   {
     id: "api",
     name: "APIs and microservices",
-    blurb: "Service design, auth and real-time delivery.",
+    blurb: "Service design, auth and real-time features.",
     items: [
       ["REST APIs", "established"],
       ["Microservices", "established"],
@@ -94,12 +90,13 @@ export const skills = [
   {
     id: "cloud",
     name: "Cloud and delivery",
-    blurb: "Monitoring and pipelines, with cloud depth still growing.",
+    blurb: "Monitoring, pipelines and deployments.",
     items: [
       ["AWS CloudWatch", "established"],
       ["AWS S3", "established"],
       ["AWS SQS", "established"],
       ["Azure DevOps CI/CD", "established"],
+      ["Docker", "established"],
       ["Git and GitHub", "established"],
       ["DigitalOcean and Hostinger deploys", "established"],
     ],
@@ -107,7 +104,7 @@ export const skills = [
   {
     id: "quality",
     name: "Testing and reliability",
-    blurb: "Tests alongside features.",
+    blurb: "Testing, debugging and code review.",
     items: [
       ["Jest", "established"],
       ["Postman", "established"],
@@ -120,7 +117,7 @@ export const skills = [
   {
     id: "ai",
     name: "AI and knowledge retrieval",
-    blurb: "Learning in public through the knowledge platform build.",
+    blurb: "Learning by building the knowledge platform.",
     items: [
       ["LLM API integration", "learning"],
       ["Prompt engineering", "learning"],
@@ -133,7 +130,7 @@ export const skills = [
   {
     id: "frontend",
     name: "Frontend and UI",
-    blurb: "Supporting experience that lets me ship full-stack modules.",
+    blurb: "Enough React to ship full-stack features.",
     items: [
       ["React.js", "established"],
       ["HTML", "established"],
@@ -147,13 +144,13 @@ export const timeline = [
     id: "self",
     kind: "Projects",
     when: "Jan 2025 – present",
-    role: "Career break, Technical projects and upskilling",
+    role: "Career break & upskilling",
     org: "Self-directed, not paid employment",
     points: [
       "Maternity break in 2025, followed by a structured return to engineering through certification, AI upskilling and hands-on projects",
       "Earned the Project Management Professional (PMP)® certification, adding formal grounding in delivery planning, risk management and stakeholder communication to technical-lead experience",
       "Completed Academy Accreditations in Generative AI Fundamentals and AI Agent Fundamentals, building a foundation for LLM-enabled backend systems",
-      "AI Enterprise Knowledge Platform (portfolio project, in development): designing a multi-tenant, document-grounded Q&A platform with NestJS, PostgreSQL/pgvector and RAG with source citations, using AWS S3 and SQS for asynchronous document ingestion and embedding",
+      "AI Enterprise Knowledge Platform (portfolio project, in development): designing a multi-tenant, document-grounded Q&A platform with NestJS, PostgreSQL/pgvector and RAG with source citations, using AWS S3 and SQS for asynchronous document ingestion and embedding. Architecture is done; the NestJS API and PostgreSQL schema are in progress",
       "Client demo website (KHALIFA perfumes): built a React + NestJS monorepo as a client demonstration project",
       "Refreshing core JavaScript/TypeScript and backend fundamentals through structured interview preparation",
     ],
@@ -167,7 +164,6 @@ export const timeline = [
     points: [
       "Completed with a grade of 8.9/10.",
       'Built "Drive Me", a cross-platform (Android and iOS) mobile app in React Native that lets users book a vetted driver to drive their own car during unplanned situations, such as travelling to a hospital when unwell. Drivers must meet a qualification criteria before they can accept bookings.',
-      "Completed the programme while working remotely as a part-time Technical Lead.",
     ],
   },
   {
@@ -175,10 +171,10 @@ export const timeline = [
     kind: "Work",
     when: "Feb 2023 – Mar 2024",
     role: "Part-time Technical Lead",
-    org: "The Recruits Group · UK recruitment-technology startup · Remote in Canada",
+    org: "The Recruits Group · UK recruitment-technology startup · Remote",
     points: [
       "Worked directly with the founder on architecture and delivery of core recruitment-platform capabilities.",
-      "Designed and built backend and full-stack modules for job posting, candidate discovery and engagement with Node.js, React, PostgreSQL and MongoDB.",
+      "Built backend modules for job posting, candidate discovery and engagement with Node.js, PostgreSQL and MongoDB, and led a two-member React frontend team.",
       "Owned technical decisions and delivery, from requirements analysis and API design to schema design and implementation.",
       "Supported deployments to DigitalOcean and Hostinger.",
     ],
@@ -236,17 +232,18 @@ export const timeline = [
 
 export { projects } from "./projects.mjs";
 
-// Statuses: implemented-tested | implemented | progress | planned | concept
-// I had no repository evidence when writing this, so everything past design is labelled honestly.
+// Statuses: done | implemented-tested | implemented | progress | planned | concept
 // Change a value here as work lands; the site updates everywhere.
 export const aiStatus = {
   badge: "In development",
   summaryLine:
-    "Architecture and product design are in progress. Components below are target architecture until implemented and tested.",
+    "Architecture and the UI concept are done. The NestJS API and PostgreSQL schema are in progress; everything after that is planned.",
   features: [
-    ["Product concept and architecture", "progress"],
-    ["Tenant-aware NestJS API", "planned"],
-    ["PostgreSQL schema for tenants, documents and status", "planned"],
+    ["Product concept and architecture", "done"],
+    ["Interactive UI concept on this site (sample data)", "concept"],
+    ["NestJS API project in TypeScript", "progress"],
+    ["Tenant-aware API endpoints", "progress"],
+    ["PostgreSQL schema for tenants, documents and status", "progress"],
     ["Upload to object storage (S3) and queue (SQS)", "planned"],
     ["Worker: extract, clean and chunk text", "planned"],
     ["Embeddings and pgvector retrieval", "planned"],
@@ -257,7 +254,26 @@ export const aiStatus = {
     ["Automated API and integration tests", "planned"],
     ["Docker, AWS deployment and CloudWatch", "planned"],
     ["Minimal React front end", "planned"],
-    ["Interactive UI concept on this site (sample data)", "concept"],
+  ],
+  done: [
+    [
+      "Product and architecture design",
+      "Ingestion and question-answering paths mapped end to end, with the main trade-offs decided up front.",
+    ],
+    [
+      "Interactive UI concept",
+      "Document library, processing states and cited answers, built on this page with sample data.",
+    ],
+  ],
+  inProgress: [
+    [
+      "NestJS API",
+      "TypeScript NestJS project set up; tenant-aware endpoints for documents being built.",
+    ],
+    [
+      "PostgreSQL schema",
+      "Tables for tenants, documents and processing status.",
+    ],
   ],
   roadmap: [
     [
@@ -287,6 +303,7 @@ export const aiStatus = {
 };
 
 export const statusLabels = {
+  done: "Done",
   "implemented-tested": "Implemented and tested",
   implemented: "Implemented",
   progress: "In progress",

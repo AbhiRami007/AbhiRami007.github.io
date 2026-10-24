@@ -1,7 +1,8 @@
 // Verifies internal links/assets resolve and tags balance. Run after build: node scripts/check.mjs
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-const dist = new URL('../dist/', import.meta.url).pathname;
+import { fileURLToPath } from 'node:url';
+const dist = fileURLToPath(new URL('../dist/', import.meta.url));
 const BASE = (process.env.BASE || '/');
 const walk = d => readdirSync(d).flatMap(f => { const p = join(d, f); return statSync(p).isDirectory() ? walk(p) : [p]; });
 let bad = 0;

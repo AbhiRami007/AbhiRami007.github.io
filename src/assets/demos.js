@@ -172,3 +172,43 @@ export function eng(el) {
   d.addEventListener('click', e => { const b = e.target.closest('[data-del]'); if (b) { msg = 'Record deleted.'; run(() => { R.splice(R.findIndex(r => r.id === b.dataset.del), 1); }); } });
   draw();
 }
+
+/* ═════════════ Recruitment platform: post a job, discover, engage ═════════════ */
+export function trg(el) {
+  const SKILLS = ['Node.js', 'React', 'PostgreSQL', 'MongoDB', 'AWS', 'Python'];
+  const C = [
+    { id: 1, n: 'Asha K.', s: ['Node.js', 'PostgreSQL', 'AWS'] }, { id: 2, n: 'Ben T.', s: ['React', 'Node.js'] },
+    { id: 3, n: 'Chloe R.', s: ['Python', 'PostgreSQL'] }, { id: 4, n: 'Dev P.', s: ['Node.js', 'MongoDB'] },
+    { id: 5, n: 'Ella M.', s: ['React', 'AWS'] }, { id: 6, n: 'Farid S.', s: ['Node.js', 'PostgreSQL', 'MongoDB'] },
+    { id: 7, n: 'Grace L.', s: ['Python', 'AWS'] }, { id: 8, n: 'Hugo W.', s: ['React', 'MongoDB'] },
+  ];
+  const STAGES = ['Shortlisted', 'Contacted', 'Interviewing'], NEXT = ['Contact', 'Book interview'];
+  const J = [{ id: 1, t: 'Backend Developer', s: ['Node.js', 'PostgreSQL'] }];
+  const S = { job: 1, pipe: {}, seq: 2, msg: '' };
+  const key = c => S.job + ':' + c;
+  const d = frame(el, 'Post a job, find candidates, engage', 'Made-up jobs and candidates. Nothing is stored.', `<div class="trg"></div>`);
+  const root = $('.trg', d);
+  function draw() {
+    const job = J.find(j => j.id === S.job);
+    const hits = C.map(c => ({ ...c, m: c.s.filter(x => job.s.includes(x)) })).filter(c => c.m.length).sort((a, b) => b.m.length - a.m.length);
+    const inPipe = C.filter(c => key(c.id) in S.pipe);
+    root.innerHTML = `<div class="hh-stats"><div class="stat"><b>${J.length}</b><span>Open jobs</span></div><div class="stat"><b>${hits.length}</b><span>Matches for this job</span></div><div class="stat"><b>${inPipe.length}</b><span>In pipeline</span></div></div>
+    <div class="hh-cols"><section><h4>Post a job</h4><form class="trg-form"><label>Job title<input type="text" name="t" placeholder="e.g. Frontend Developer" autocomplete="off"></label><fieldset><legend class="mut">Required skills</legend><div class="trg-skills">${SKILLS.map(x => `<label class="chk"><input type="checkbox" name="s" value="${x}">${x}</label>`).join('')}</div></fieldset><button class="btn btn-primary">Post job</button></form><p class="eng-msg" role="status">${esc(S.msg)}</p>
+      <div class="app-grid">${J.map(j => `<button type="button" class="appc ${j.id === S.job ? 'on' : ''}" data-job="${j.id}" aria-pressed="${j.id === S.job}"><b>${esc(j.t)}</b><span class="mut">${j.s.join(', ')}</span></button>`).join('')}</div></section>
+    <section><h4>Candidates for ${esc(job.t)}</h4><div class="app-grid">${hits.map(c => `<div class="appc"><span><b>${esc(c.n)}</b><br><span class="mut">${c.m.length} of ${job.s.length} skills: ${c.m.join(', ')}</span></span>${key(c.id) in S.pipe ? `<span class="st indexed">${STAGES[S.pipe[key(c.id)]]}</span>` : `<button class="mini-btn" data-a="short" data-id="${c.id}">Shortlist</button>`}</div>`).join('') || '<p class="mut">No candidates match these skills yet.</p>'}</div></section>
+    <section><h4>Pipeline</h4>${inPipe.length ? `<div class="app-grid">${inPipe.map(c => { const st = S.pipe[key(c.id)]; return `<div class="appc"><span><b>${esc(c.n)}</b><br><span class="st ${st < 2 ? 'queued' : 'indexed'}">${STAGES[st]}</span></span>${st < 2 ? `<button class="mini-btn" data-a="next" data-id="${c.id}">${NEXT[st]}</button>` : ''}</div>`; }).join('')}</div>` : '<p class="mut">Shortlisted candidates for this job show up here.</p>'}</section></div>`;
+  }
+  root.addEventListener('submit', e => {
+    e.preventDefault(); const f = e.target, t = f.t.value.trim(), s = $$('input[name="s"]:checked', f).map(x => x.value);
+    if (!t || !s.length) { S.msg = 'Add a job title and at least one required skill.'; draw(); return; }
+    J.push({ id: S.seq, t, s }); S.job = S.seq++; S.msg = `Posted. ${t} is live and matched against candidates.`; draw();
+  });
+  root.addEventListener('click', e => {
+    const b = e.target.closest('[data-job],[data-a]'); if (!b) return;
+    if (b.dataset.job) { S.job = +b.dataset.job; S.msg = ''; }
+    else if (b.dataset.a === 'short') S.pipe[key(b.dataset.id)] = 0;
+    else if (b.dataset.a === 'next') S.pipe[key(b.dataset.id)]++;
+    draw();
+  });
+  draw();
+}

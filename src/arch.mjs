@@ -1,10 +1,10 @@
 // Target architecture for the AI Enterprise Knowledge Platform (from the product brief).
-// This is a design, not a claim that every component exists. See aiStatus in site.mjs.
+// Build progress is tracked in aiStatus in site.mjs.
 export const arch = {
   ingestion: {
     label: 'Ingestion path',
     steps: [
-      { t: 'Upload UI', s: 'to NestJS API', d: 'A user uploads a document. The API receives the request and creates a document record in a visible state.', x: 'Showing upload, queued, processing, indexed and failed states is more honest than implying instant ingestion.' },
+      { t: 'Upload UI', s: 'to NestJS API', d: 'A user uploads a document. The API receives the request and creates a document record in a visible state.', x: 'Explicit upload, queued, processing, indexed and failed states tell users exactly where each document is.' },
       { t: 'Validate', s: 'and authorise', d: 'The API validates the request and checks the tenant permissions of the user.', x: 'Tenant isolation is enforced server-side on every relevant path. UI filters alone are not security.' },
       { t: 'Store and queue', s: 'S3 + SQS (target)', d: 'The original file goes to object storage, separate from metadata. An ingestion job is placed on a queue.', x: 'Async ingestion keeps upload requests short. The cost is queue visibility, retries, idempotency and eventual consistency.' },
       { t: 'Worker', s: 'extract, normalise, chunk', d: 'A worker extracts text, cleans it and splits it into chunks with source metadata.', x: 'Chunk size and overlap affect precision, context size and cost. They should be chosen by experiment, not by guesswork.' },

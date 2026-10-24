@@ -2,7 +2,7 @@
 
 **Live site: [abhirami007.github.io](https://abhirami007.github.io)**
 
-Personal portfolio of Abhirami Pradeep Susi, a backend software engineer with around 4 years building
+Personal portfolio of Abhirami Pradeep Susi, a backend software engineer with 3+ years building
 Node.js, TypeScript and NestJS APIs, microservices and real-time features for enterprise products,
 now extending that work into AI-powered knowledge systems.
 
@@ -68,7 +68,7 @@ If the site is ever hosted as a *project* page (for example `username.github.io/
 
 ### Updating the AI platform honestly
 
-Each feature in `aiStatus.features` has one status: `implemented-tested`, `implemented`, `progress`,
+Each feature in `aiStatus.features` has one status: `done`, `implemented-tested`, `implemented`, `progress`,
 `planned` or `concept`. Change a status only when the code (and tests) exist. Add a repository link and a
 real test summary to the case study once you have them.
 

@@ -373,7 +373,7 @@ const visuals = {
     ${lab(
       24,
       340,
-      "Target architecture · illustrative",
+      "Target architecture",
       "#7f8da8",
       "start"
     )}</svg>`,
@@ -464,6 +464,7 @@ const demoLabel = {
   ff: "Interactive demo",
   hh: "Interactive demo",
   eng: "Interactive demo",
+  trg: "Interactive demo",
 };
 function card(p, wide, i) {
   return `<article class="card${
@@ -501,7 +502,7 @@ const marq = [
   "RAG",
   "pgvector",
 ];
-const icons = ["4", "API", "EN", "30%", "AI"];
+const icons = ["3+", "API", "EN", "30%", "AI"];
 
 function home() {
   const body = `
@@ -523,12 +524,12 @@ function home() {
     <p class="sr-only">Decorative animation: a central core connected to service nodes labelled API, PostgreSQL, Redis, Queue, pgvector and LLM.</p>
     <div class="chip3d" style="left:0;top:4%;--d:-18px"><b>NestJS · TypeScript</b>APIs and microservices</div>
     <div class="chip3d" style="right:0;top:84%;--d:22px"><b>PostgreSQL · Redis · OpenSearch</b>Data and search</div>
-    <div class="chip3d ai" style="left:2%;bottom:2%;--d:-26px"><b>RAG · pgvector</b>Learning, in development</div></div></div></section>
+    <div class="chip3d ai" style="left:2%;bottom:2%;--d:-26px"><b>RAG · pgvector</b>AI platform, in progress</div></div></div></section>
 <div class="marquee" aria-hidden="true"><div class="track">${[...marq, ...marq]
     .map((t) => `<span>${t}</span>`)
     .join("")}</div></div>
 
-<section id="snapshot" aria-labelledby="snap-h"><div class="wrap"><div class="sec-head" data-reveal><h2 id="snap-h">Professional snapshot</h2><p>What my resume supports, stated plainly.</p></div>
+<section id="snapshot" aria-labelledby="snap-h"><div class="wrap"><div class="sec-head" data-reveal><h2 id="snap-h">Professional snapshot</h2><p>The short version of my resume.</p></div>
   <div class="bento">${snapshot
     .map(
       (s, i) =>
@@ -538,7 +539,7 @@ function home() {
     )
     .join("")}</div></div></section>
 
-<section id="work" aria-labelledby="work-h"><div class="wrap"><div class="sec-head" data-reveal><h2 id="work-h">Selected work</h2><p>Four enterprise projects from Experion Technologies, each with a full case study: how the system works end to end, flow diagrams, and an interactive simulation you can play with. Client work is shown as abstract diagrams, never as screenshots.</p></div>
+<section id="work" aria-labelledby="work-h"><div class="wrap"><div class="sec-head" data-reveal><h2 id="work-h">Selected work</h2><p>Four enterprise products from Experion Technologies and a recruitment platform I led part-time. Each case study covers how the system works, what I built, flow diagrams and an interactive simulation. Client work is shown as diagrams, not screenshots.</p></div>
   <div class="proj-grid">${gallery
     .map((p, i) => card(p, i === 0 || i === gallery.length - 1, i))
     .join("")}</div></div></section>
@@ -548,7 +549,7 @@ function home() {
   <p class="lead">${esc(ai.summary)}</p>
   <ul class="facts"><li><strong>Problem</strong> ${esc(
     ai.problem
-  )}</li><li><strong>Users</strong> An employee who needs trustworthy answers from company documents without opening and searching many files.</li><li><strong>Next</strong> ${esc(
+  )}</li><li><strong>Status</strong> ${esc(aiStatus.summaryLine)}</li><li><strong>Next</strong> ${esc(
     aiStatus.nextMilestone
   )}</li></ul>
   <a class="btn btn-primary" data-magnet href="${u(
@@ -559,9 +560,9 @@ function home() {
     .slice(0, 6)
     .map(([t, s]) => `<li><span>${esc(t)}</span>${pill(s)}</li>`)
     .join("")}</ul>
-  <p class="honesty">This is a portfolio project, not a launched product. Features are marked complete only once implemented and tested.</p></div></div></div></section>
+  <p class="honesty">Portfolio project. Statuses are updated as each feature ships.</p></div></div></div></section>
 
-<section id="skills" aria-labelledby="skills-h"><div class="wrap split"><header data-reveal><h2 id="skills-h">Technical capabilities</h2><p>Grouped by what they are used for. Solid tiles are technologies I have used in professional work. Dashed tiles are ones I am currently learning.</p></header>
+<section id="skills" aria-labelledby="skills-h"><div class="wrap split"><header data-reveal><h2 id="skills-h">Technical capabilities</h2><p>Grouped by what they are used for. Solid tiles: used in professional work. Dashed tiles: currently learning.</p></header>
   <div data-reveal><div class="skill-tabs" role="tablist" aria-label="Skill categories">${skills
     .map(
       (s) =>
@@ -590,7 +591,7 @@ function home() {
     )
     .join("")}</div></div></section>
 
-<section id="experience" aria-labelledby="exp-h"><div class="wrap split"><header data-reveal><h2 id="exp-h">Experience and education</h2><p>Select an entry to see responsibilities. Dates are as listed on my resume.</p></header>
+<section id="experience" aria-labelledby="exp-h"><div class="wrap split"><header data-reveal><h2 id="exp-h">Experience and education</h2><p>Select an entry to see what I worked on.</p></header>
   <ol class="tl">${timeline
     .map(
       (t) =>
@@ -613,7 +614,7 @@ function home() {
     .join("")}</ol></div></section>
 
 <section id="contact" class="contact" aria-labelledby="contact-h"><div class="wrap"><h2 id="contact-h" data-reveal>Let’s talk about backend engineering roles.</h2>
-  <p class="lead" data-reveal>I am looking for Software Engineering/ Platform Engineering roles and I am open to relocating. Email is the quickest way to reach me.</p>
+  <p class="lead" data-reveal>I'm looking for backend, software or platform engineering roles and I'm open to relocating. Email is the quickest way to reach me.</p>
   <div class="btn-row" data-reveal><a class="btn btn-primary" data-magnet href="mailto:${
     site.email
   }">${esc(site.email)}</a><a class="btn btn-ghost" data-magnet href="${
@@ -697,7 +698,7 @@ function caseRich(p, i) {
     .map((l) => `<li><strong>${esc(l.n)}.</strong> ${esc(l.d)}</li>`)
     .join("")}</ol></div></div></section>
 
-<section class="chap" id="flows"><div class="wrap"><h2 data-reveal>Flow diagrams</h2><p class="sub" data-reveal>Who talks to whom, step by step. Press Play or step through manually. These are drawn from the project’s step-by-step flow and simplified for clarity.</p>
+<section class="chap" id="flows"><div class="wrap"><h2 data-reveal>Flow diagrams</h2><p class="sub" data-reveal>Who talks to whom, step by step. Press Play or step through manually. Simplified from the real flows.</p>
   <div id="seq" data-reveal><ol>${c.sequences
     .map(
       (s) =>
@@ -744,7 +745,7 @@ function caseRich(p, i) {
     .join("")}</div>
   <h3 style="margin:36px 0 12px" data-reveal>Technologies</h3>${tags(p.tech)}${
     p.slug === "free2move-charge"
-      ? '<p class="honesty">Across my Experion software-engineer role I reported a 30% API performance improvement from Redis caching, PostgreSQL indexing and API redesign.</p>'
+      ? '<p class="honesty">In this role I improved API performance by 30% through Redis caching, PostgreSQL indexing and API redesign.</p>'
       : ""
   }</div></section>
 
@@ -754,7 +755,7 @@ function caseRich(p, i) {
         `<div data-tilt="8" data-reveal style="--i:${k}">${esc(t)}</div>`
     )
     .join("")}</div>
-  <p class="note" style="margin-top:28px">Described at a general level. No confidential architecture, client data or screens are shown.</p></div></section>
+  <p class="note" style="margin-top:28px">Client details, data and screens are left out.</p></div></section>
 <section><div class="wrap pager"><a class="btn btn-ghost" href="${u(
     `projects/${prev.slug}/`
   )}">Previous: ${esc(prev.name)}</a><a class="btn btn-ghost" href="${u(
@@ -829,11 +830,11 @@ const tradeoffs = [
   ],
   [
     "PostgreSQL with pgvector",
-    "A pragmatic first stack: relational metadata and vectors stay close together. Retrieval quality and scale get evaluated before a separate vector database is considered.",
+    "Relational metadata and vectors stay in one database. A separate vector store only comes in if retrieval quality or scale demands it.",
   ],
   [
     "Chunk size and overlap",
-    "These shape retrieval precision, context size and cost. The plan is to choose them from experiments, not arbitrary claims.",
+    "These shape retrieval precision, context size and cost, so they will be tuned by experiment.",
   ],
   [
     "Hybrid retrieval",
@@ -841,11 +842,11 @@ const tradeoffs = [
   ],
   [
     "Citation design",
-    "Citations must map to real retrieved chunks and source locations. Decorative citations that nothing backs are out.",
+    "Every citation maps to a real retrieved chunk and source location the user can open.",
   ],
   [
     "Tenant boundaries",
-    "Server-side filters and authorisation on every relevant read path. Interface filters are not security, and no security guarantee is claimed until it is built and tested.",
+    "Server-side filters and authorisation on every read path. Interface filters are not security.",
   ],
   [
     "Redis, only if justified",
@@ -881,16 +882,16 @@ function caseAI() {
   )}</dd></div><div><dt>My role</dt><dd>${esc(
     p.role
   )}</dd></div><div><dt>Type</dt><dd>Portfolio project, not a launched product</dd></div><div><dt>Primary user</dt><dd>An employee seeking trustworthy answers from company documents</dd></div></dl>
-  <div class="case-art">${visuals.ai()}</div><p class="fig">Target architecture, illustrative.</p></div>
+  <div class="case-art">${visuals.ai()}</div><p class="fig">Target architecture.</p></div>
 
 <section><div class="wrap prose"><h2>Why this problem matters</h2><p>Enterprise information is scattered across documents. Keyword search can miss meaning, and a general-purpose LLM can produce answers nothing supports. This project explores a workflow that retrieves relevant internal context first and uses it to ground each response, so the user can inspect the evidence.</p>
-  <p>This is a design exploration, not a customer-research claim: there are no users, benchmarks or production deployments behind it yet.</p>
-  <h2 style="margin-top:36px">Principles</h2><ul><li><strong>Grounded answers.</strong> Show citations and make supporting passages easy to inspect.</li><li><strong>Visible processing state.</strong> Upload, queued, processing, indexed and failed are different states, not instant magic.</li><li><strong>Tenant boundaries.</strong> Organisation-level separation is part of the design from the start.</li><li><strong>Operational clarity.</strong> Failures, retries and limits are understandable.</li><li><strong>Progress honesty.</strong> Every feature carries a status label.</li></ul></div></section>
+  <p>It's a portfolio project. The goal is to learn RAG by building it the way I would for a real team: tenant isolation, async processing, failure states and tests.</p>
+  <h2 style="margin-top:36px">Principles</h2><ul><li><strong>Grounded answers.</strong> Show citations and make supporting passages easy to inspect.</li><li><strong>Visible processing state.</strong> Upload, queued, processing, indexed and failed are different states, not instant magic.</li><li><strong>Tenant boundaries.</strong> Organisation-level separation is part of the design from the start.</li><li><strong>Operational clarity.</strong> Failures, retries and limits are understandable.</li><li><strong>Clear status.</strong> Every feature on this page is marked done, in progress or planned.</li></ul></div></section>
 
 <section><div class="wrap"><div class="sec-head"><h2>Product walkthrough</h2><p>An interactive UI concept: a document library, ingestion status and source-cited Q&amp;A. Try asking about remote work, expenses or a lost laptop, then ask something else to see the insufficient-evidence state.</p></div>
   <div id="concept"><noscript><p class="note">The interactive concept needs JavaScript. It shows a sample workspace with a document library, a document detail view and an Ask Knowledge screen.</p></noscript></div></div></section>
 
-<section id="arch"><div class="wrap"><div class="sec-head"><h2>System architecture</h2><p>The two main paths through the system. This is the target architecture. Select a step for its detail and trade-off.</p></div>
+<section id="arch"><div class="wrap"><div class="sec-head"><h2>System architecture</h2><p>The two main paths through the system, as designed. Select a step for its detail and trade-off.</p></div>
   <script type="application/json" id="arch-data">${JSON.stringify(
     arch
   )}</script>
@@ -902,36 +903,48 @@ function caseAI() {
     "qa"
   )}</div></div></section>
 
-<section><div class="wrap"><div class="sec-head"><h2>Engineering decisions</h2><p>Trade-offs I want to be able to defend, written before the code so the experiments can test them.</p></div>
+<section><div class="wrap"><div class="sec-head"><h2>Engineering decisions</h2><p>Trade-offs decided up front, which the build will test.</p></div>
   <div class="tradeoffs">${tradeoffs
     .map(
       ([h, t]) => `<div class="theme"><h3>${esc(h)}</h3><p>${esc(t)}</p></div>`
     )
     .join("")}</div></div></section>
 
-<section><div class="wrap prose"><h2>Reliability and testing</h2><p>There are no test results to show yet, and none are claimed. Evidence will be added here only when it exists.</p>
-  <p><strong>Planned:</strong></p><ul><li>API and integration tests for ingestion, retrieval, access boundaries and error handling.</li><li>Failure-path tests for extraction and embedding errors.</li><li>One measured retrieval-quality experiment and one latency measurement, published only once actually run.</li></ul></div></section>
+<section><div class="wrap prose"><h2>Reliability and testing</h2><p>Testing starts with the first vertical slice. The plan:</p><ul><li>API and integration tests for ingestion, retrieval, access boundaries and error handling.</li><li>Failure-path tests for extraction and embedding errors.</li><li>One retrieval-quality experiment and one latency measurement, with results published here.</li></ul></div></section>
 
-<section><div class="wrap split"><header><h2>Status and roadmap</h2><p>${esc(
+<section><div class="wrap"><div class="sec-head"><h2>Where it stands</h2><p>${esc(
     aiStatus.summaryLine
-  )}</p></header><div>
-  <ul class="feat-list">${aiStatus.features
-    .map(([t, s]) => `<li><span>${esc(t)}</span>${pill(s)}</li>`)
-    .join("")}</ul>
-  <h3 style="margin:32px 0 16px">Roadmap</h3><ol class="roadmap">${aiStatus.roadmap
+  )}</p></div>
+  <div class="tradeoffs">${[
+    ["Done", aiStatus.done],
+    ["In progress", aiStatus.inProgress],
+  ]
+    .map(
+      ([h, items]) =>
+        `<div class="theme"><h3>${esc(h)}</h3><ul>${items
+          .map(([t, d]) => `<li><strong>${esc(t)}.</strong> ${esc(d)}</li>`)
+          .join("")}</ul></div>`
+    )
+    .join("")}</div></div></section>
+
+<section><div class="wrap split"><header><h2>What's next</h2><p>The build order from here. Each step ends with something working and tested.</p></header><div>
+  <ol class="roadmap">${aiStatus.roadmap
     .map(([h, t]) => `<li><b>${esc(h)}</b><p>${esc(t)}</p></li>`)
     .join("")}</ol>
   <p class="note"><strong>Next milestone.</strong> ${esc(
     aiStatus.nextMilestone
-  )}</p></div></div></section>
+  )}</p>
+  <h3 style="margin:32px 0 16px">Feature status</h3><ul class="feat-list">${aiStatus.features
+    .map(([t, s]) => `<li><span>${esc(t)}</span>${pill(s)}</li>`)
+    .join("")}</ul></div></div></section>
 
-<section><div class="wrap prose"><h2>What I am learning</h2><p>I am learning LLM API integration, prompt engineering, embeddings and vector retrieval by building this. Open questions include chunking strategy, whether hybrid retrieval beats vector search alone on this kind of content, and how best to evaluate citation quality. I will write up results as they are measured.</p>
+<section><div class="wrap prose"><h2>What I am learning</h2><p>Building this is how I'm learning LLM API integration, prompt engineering, embeddings and vector retrieval. The open questions I want to answer: the right chunking strategy, whether hybrid retrieval beats vector search alone on this kind of content, and how to evaluate citation quality. I'll write up results as I measure them.</p>
   <p><a class="btn btn-ghost" href="${
     site.github
   }" rel="noopener" target="_blank">See my GitHub</a></p></div></section>`;
   return page({
     title: `${p.name}, in development · ${site.name}`,
-    desc: "An in-development portfolio project: a multi-tenant, document-grounded question answering platform with citations. Architecture, trade-offs, honest status and an interactive UI concept.",
+    desc: "A multi-tenant, document-grounded question answering platform with citations, in development. Architecture, trade-offs, current status and an interactive UI concept.",
     path: `projects/${p.slug}/`,
     body,
     ogType: "article",
